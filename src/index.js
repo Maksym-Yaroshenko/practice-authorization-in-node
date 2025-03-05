@@ -2,9 +2,9 @@
 
 import { initMongoDB } from './db/initMongoDB.js';
 import { startServer } from './server.js';
-// import { bubbleSort } from './utils/bubbleSort.js';
+import { bubbleSort } from './utils/bubbleSort.js';
 // import { firstArgumentForDispersion } from './utils/FirstArgumentForDispersion.js';
-// import { sampleaAverage } from './utils/SampleAverage.js';
+import { sampleaAverage } from './utils/sampleAverage.js';
 
 const bootstrap = async () => {
   try {
@@ -21,7 +21,8 @@ const bootstrap = async () => {
     // const sortArr2 = bubbleSort(
     //   '2,9 3,8 4,2 4,4 4,5 4,7 5,1 5,3 5,3 5,4 5,6 5,6 5,6 5,8 5,8 5,9 6,0 6,0 6,0 6,0 6,1 6,1 6,1 6,2 6,4 6,5 6,5 6,7 6,7 6,8 6,9 7,1 7,4 7,7 8,2 8,5',
     // );
-    // console.log(sampleaAverage(sortArr2));
+    const arr = [-11, 24, -16, 15, 8];
+    console.log(sampleaAverage(arr));
     // console.log(firstArgumentForDispersion(sortArr));
     await initMongoDB();
     startServer();
