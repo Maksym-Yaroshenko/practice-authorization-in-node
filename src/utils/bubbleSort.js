@@ -18,5 +18,7 @@ export function bubbleSort(str) {
     }
     if (!wasSwap) break;
   }
+
+  console.log('Length: ' + arr.length);
   return arr;
 }

@@ -3,7 +3,8 @@
 import { initMongoDB } from './db/initMongoDB.js';
 import { startServer } from './server.js';
 import { bubbleSort } from './utils/bubbleSort.js';
-// import { firstArgumentForDispersion } from './utils/FirstArgumentForDispersion.js';
+import { firstArgumentForDispersion } from './utils/FirstArgumentForDispersion.js';
+import './utils/binaryTree.js';
 import { sampleaAverage } from './utils/sampleAverage.js';
 
 const bootstrap = async () => {
@@ -14,16 +15,26 @@ const bootstrap = async () => {
     // console.log(firstArgumentForDispersion(HVArr) - sampleaAverage(HVArr) ** 2);
     // console.log(sampleaAverage(HVArr) ** 2);
 
-    // const sortArr = bubbleSort(
-    //   '8 9 9 9 10 11 11 12 13 13 14 15 17 17 17 17 18 18 19 19 19 19 19 20 20 20 20 20 20 20 20 21 21 21 21 22 22 22 23 23',
-    // );
+    const sortArrHV5 = bubbleSort(
+      '118 90 106 113 99 103 125 91 99 97 101 98 103 117 102 84 103 93 93 113 95 104 84 113 94 97 117 111 98 108 106 99 113 109 105 104 90 112 104 109 97 95 94 117 90 96 112 100 101 120 104 103 118 97 114 94 107 114 89 87 104 82 122 77 104 101 103 110 97 101 102 124 92 93 96 103 89 90 82 99 92 102 110 101 105 94 102 96 96 108 110 86 107 100 90',
+    );
+
+    console.log(
+      firstArgumentForDispersion(sortArrHV5) - sampleaAverage(sortArrHV5) ** 2,
+    );
 
     // const sortArr2 = bubbleSort(
-    //   '2,9 3,8 4,2 4,4 4,5 4,7 5,1 5,3 5,3 5,4 5,6 5,6 5,6 5,8 5,8 5,9 6,0 6,0 6,0 6,0 6,1 6,1 6,1 6,2 6,4 6,5 6,5 6,7 6,7 6,8 6,9 7,1 7,4 7,7 8,2 8,5',
+    //   '118 90 106 113 99 103 125 91 99 97 101 98 103 117 102 84 103 93 93 113 95 104 84 113 94 97 117 111 98 108 106 99 113 109 105 104 90 112 104 109 97 95 94 117 90 96 112 100 101 120 104 103 118 97 114 94 107 114 89 87',
     // );
-    const arr = [-11, 24, -16, 15, 8];
-    console.log(sampleaAverage(arr));
-    // console.log(firstArgumentForDispersion(sortArr));
+
+    // const arr = [
+    //   31, 54, 17, 7, 56, 32, 40, 35, 43, 31, 39, 46, 40, 26, 29, 35, 32, 27, 42,
+    //   45, 28, 36, 30, 43, 30,
+    // ];
+    // console.log(sortArr);
+    // console.log(sampleaAverage(sortArr2));
+    // console.log(sampleaAverage(sortArr2));
+    // console.log(firstArgumentForDispersion(sortArr2));
     await initMongoDB();
     startServer();
   } catch (error) {

@@ -12,4 +12,4 @@ export const firstArgumentForDispersion = (arr) => {
   return total / arr.length;
 };
 
-// console.log(firstArgumentForDispersion([1, 2, 3]));
+// console.log(firstArgumentForDispersion([-11, 24, -16, 15, 8]));
